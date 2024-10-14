@@ -1,0 +1,14 @@
+@import './mixin.scss';
+@import './variables.scss';
+.page{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: space-between;
+    min-height: calc(100% - 272px);
+}
+
+@media (min-width: $desktop-size) {
+    .page{
+        min-height: calc(100% - 231.53px);
+    }
+}

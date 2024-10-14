@@ -1,0 +1,60 @@
+@import '../../../mixin.scss';
+@import '../../../variables.scss';
+
+.country{
+    width: 264px;
+    height: 336px;
+    background-color: $light-background;
+    overflow: hidden;
+    border-radius: 5px;
+    border: none;
+    img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .countryDescription{
+        h1{
+            padding: 24px 24px 8px 24px;
+            @include font(18px,800,26px,null,left);
+            color: $light-color;
+        }
+        .countryDescriptionTitle{
+            padding: 8px 24px 46px 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            span{
+                display: flex;
+                gap: 2px;
+                h5{
+                     @include font(14px,600,16px,null,left);
+                    color: $light-color;
+                }
+                h6{
+                     @include font(14px,300,16px,null,left);
+                    color: $light-color;
+                }
+            }
+        }
+    }
+}
+
+.countryDark{
+    background-color: $dark-background;
+    .countryDescription{
+        h1{
+            color: $dark-color;
+        }
+        .countryDescriptionTitle{
+            span{
+                h5{
+                    color: $dark-color;
+                }
+                h6{
+                    color: $dark-color;
+                }
+            }
+        }
+    }
+}

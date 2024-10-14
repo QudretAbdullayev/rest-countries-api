@@ -1,0 +1,28 @@
+@import '../../mixin.scss';
+@import '../../variables.scss';
+
+.countries{
+    padding-bottom: 65px;
+    width: 100%;
+    background-color: $light-background-2;
+    .container{
+        width: $mobile;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(264px, 264px));
+        gap: 40px;
+        justify-content: center;
+    }
+}
+
+.countriesDark{
+    background-color: $dark-background-2;
+}
+
+@media (min-width:$desktop-size) {
+    .countries{
+        .container{
+            gap: 75px;
+        }
+    }
+}

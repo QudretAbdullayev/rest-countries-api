@@ -1,0 +1,73 @@
+@import '../../mixin.scss';
+@import '../../variables.scss';
+
+.search{
+    width: 100%;
+    background-color: $light-background-2;
+    .container{
+        padding: 24px 0 40px 0;
+        width: $mobile;
+        margin: 0 auto;
+        .searchBox{
+            position: relative;
+            img{
+                position: absolute;
+                top: 16px;
+                left: 32px;
+                width: 16px;
+                height: 16px;
+            }
+            input{
+                background-color: $light-background;
+                width: 100%;
+                padding: 14px 32px 14px 74px;
+                @include font(12px,400,20px,null,left);
+                color: $light-color-2;
+                border-radius: 5px;
+                border: none;
+            }
+            ::placeholder {
+                @include font(12px,400,20px,null,left);
+                color: $light-color-2;
+            }
+        }
+    }
+}
+.searchDark{
+    background-color: $dark-background-2;
+    .container{
+        .searchBox{
+            input{
+                background-color: $dark-background;
+                color: $dark-color;
+            }
+            ::placeholder {
+                color: $dark-color;
+            }
+        }
+    }
+}
+
+@media (min-width:$desktop-size) {
+    .search{
+        width: 50%;
+        .container{
+            padding: 48px 0;
+            width: calc($desktop / 2);
+            margin: 0 0 0 auto;
+            .searchBox{
+                width: 480px;
+                img{
+                    top: 19px;
+                }
+                input{
+                    padding: 18px 32px 18px 74px;
+                    @include font(14px,400,20px,null,left);
+                }
+                ::placeholder {
+                    @include font(14px,400,20px,null,left);
+                }
+            }
+        }
+    }
+}

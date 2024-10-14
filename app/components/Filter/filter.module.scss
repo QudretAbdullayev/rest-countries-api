@@ -1,0 +1,77 @@
+@import '../../mixin.scss';
+@import '../../variables.scss';
+
+.filter{
+    width: 100%;
+    background-color: $light-background-2;
+    padding-bottom: 32px;
+    .container{
+        width: $mobile;
+        margin: 0 auto;
+        .select{
+            width: 58%;
+            position: relative;
+            select{
+                width: 100%;
+                padding: 14px 24px;
+                @include font(12px,400,20px, null,left);
+                color: $light-color;
+                background-color: $light-background;
+                border: none;
+                border-radius: 5px;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                text-indent: 1px;
+                text-overflow: '';
+            }
+            img{
+                position: absolute;
+                pointer-events: none;
+                top: 19px;
+                right: 19px;
+            }
+        }
+        
+    }
+}
+
+.filterDark{
+    background-color: $dark-background-2;
+    .container{
+        .select{
+            select{
+                background-color: $dark-background;
+                color: $dark-color;
+            }
+        }
+        
+    }
+}
+
+@media (min-width:$desktop-size) {
+    .filter{
+        padding: 48px 0;
+        width: 50%;
+        .container{
+            width: calc($desktop / 2);
+            margin: 0 auto 0 0;
+            display: flex;
+            justify-content: flex-end;
+            .select{
+                width: 200px;
+                select{
+                    cursor: pointer;
+                    padding: 18px 24px;
+                    @include font(14px,400,20px, null,left);
+                }
+                img{
+                    top: 22px;
+                    right: 18px;
+                    width: 12px;
+                    height: 12px;
+                }
+            }
+            
+        }
+    }
+}
