@@ -3,13 +3,161 @@
 
 .countryDetail{
     width: 100%;
+    background-color: $light-background-2;
+    padding: 32px 0 60px 0;
     .container{
-        width: $mobile;
+        width: $mobile-country-detail-page;
         margin: 0 auto;
         img{
             width: 100%;
-            height: auto;
             object-fit: cover;
+            border-radius: 5.72px;
+        }
+        .countryDescription{
+            h1{
+                @include font(22px,800,30.01px,null,left);
+                padding: 44px 0 16px 0;
+                color: $light-color;
+            }
+            div{
+                h3{
+                    @include font(16px,600,24px,null,left);
+                    color: $light-color;
+                }
+                span{
+                    display: flex;
+                    gap: 3px;
+                    h4{
+                        @include font(12px,300,16.37px,null,center);
+                        color: $light-color;
+                        background-color: $light-background;
+                        padding: 6px 12px;
+                        border-radius: 2px;
+                        border: none;
+                        box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 10%);
+                    }
+                    h5{
+                        @include font(14px,600,32px,null,left);
+                        color: $light-color;
+                    }
+                    h6{
+                        @include font(14px,300,32px,null,left);
+                        color: $light-color;
+                    }
+                }
+            }
+            .countrySecondDetail{
+                padding: 32px 0 34px 0;
+            }
+            .borderCountries{
+                span{
+                    padding-top: 16px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 8px;
+                }
+                h4{
+                    flex-grow: 1;
+                }
+            }
+        }
+    }
+}
+
+.countryDetailDark{
+    background-color: $dark-background-2;
+    .container{
+        .countryDescription{
+            h1{
+                color: $dark-color;
+            }
+            div{
+                h3{
+                    color: $dark-color;
+                }
+                span{
+                    h4{
+                        color: $dark-color;
+                        background-color: $dark-background;
+                        box-shadow: 1px 1px 1px 1px rgba(17, 21, 23, 10%);
+                    }
+                    h5{
+                        color: $dark-color;
+                    }
+                    h6{
+                        color: $dark-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $desktop-size) {
+    .countryDetail{
+        padding: 40px 0 60px 0;
+        .container{
+            width: $desktop;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 144px;
+            img{
+                width: 559.71px;
+                object-fit: cover;
+                border-radius: 10.01px;
+            }
+            .countryDescription{
+                display: flex;
+                flex-wrap: wrap;
+                h1{
+                    @include font(32px,800,43.65px,null,left);
+                    padding: 0 0 23px 0;
+                    width: 100%;
+                }
+                div{
+                    h3{
+                        @include font(16px,600,24px,null,left);
+                    }
+                    span{
+                        h4{
+                            @include font(14px,300,19.1px,null,center);
+                            padding: 6px 2px;
+                            border-radius: 2px;
+                            border: none;
+                            width: 96px;
+                        }
+                        h5{
+                            @include font(16px,600,32px,null,left);
+                        }
+                        h6{
+                            @include font(16px,300,32px,null,left);
+                        }
+                    }
+                }
+                .countryFirstDetail{
+                    width: 55%;
+                }
+                .countrySecondDetail{
+                    width: 45%;
+                    padding: 0;
+                }
+                .borderCountries{
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+                    padding-top: 16px;
+                    span{
+                        padding-top: 0;
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 10px;
+                    }
+                    h4{
+                        flex-grow: inherit;
+                    }
+                }
+            }
         }
     }
 }

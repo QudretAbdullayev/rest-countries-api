@@ -5,14 +5,15 @@ import germany from '../../assets/icons/flag/Germany.png'
 
 const CountryDetail = () => {
   return (
-    <section className={styles.countryDetail}>
+    <section className={`${styles.countryDetail} ${styles.countryDetailDark}`}>
         <div className={styles.container}>
             <Image
             src={germany}
             alt='germany'
             />
             <div className={styles.countryDescription}>
-                <div>
+                <h1>Belgium</h1>
+                <div className={styles.countryFirstDetail}>
                     <span>
                         <h5>Native Name:</h5>
                         <h6>België</h6>
@@ -34,7 +35,7 @@ const CountryDetail = () => {
                         <h6>Brussels</h6>
                     </span>
                 </div>
-                <div>
+                <div className={styles.countrySecondDetail}>
                     <span>
                         <h5>Top Level Domain:</h5>
                         <h6>.be</h6>
@@ -48,7 +49,7 @@ const CountryDetail = () => {
                         <h6>Dutch, French, German</h6>
                     </span>
                 </div>
-                <div>
+                <div className={styles.borderCountries}>
                     <h3>Border Countries:</h3>
                     <span>
                         <h4>France</h4>

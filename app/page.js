@@ -3,13 +3,15 @@ import styles from "./page.module.scss";
 import Search from "./components/Search/Search";
 import Filter from "./components/Filter/Filter";
 import Countries from "./components/Countries/Countries";
+import CountryDetail from "./components/CountryDetail/CountryDetail";
 
 export default function Home() {
   return (
     <main className={styles.page}>
-      <Search/>
+      {/* <Search/>
       <Filter/>
-      <Countries/>
+      <Countries/> */}
+      <CountryDetail/>
     </main>
   );
 }
