@@ -11,7 +11,8 @@ export default function Home() {
       {/* <Search/>
       <Filter/>
       <Countries/> */}
-      <CountryDetail/>
+      {/* <CountryDetail/> */}
+      <Countries/>
     </main>
   );
 }
